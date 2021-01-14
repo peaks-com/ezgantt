@@ -31,7 +31,7 @@ function linkToGantt() {
         }).join('&');
     }
 
-    const htmlString = `<a href="https://ezgantt.googleplex.com/${queryString}#${id}" target="_blank">Open Gantt View</a>`;
+    const htmlString = `<a href="https://peaks-com.github.io/ezgantt/${queryString}#${id}" target="_blank">Open Gantt View</a>`;
 
     const htmlOutput = HtmlService
         .createHtmlOutput(htmlString)
