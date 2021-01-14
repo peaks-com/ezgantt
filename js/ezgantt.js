@@ -24,10 +24,8 @@ let daysToMilliseconds = days => {
     };
 
 const
-    /** @type {boolean} */ IS_PUBLIC = window.location.toString().includes('appspot'),
-    /** @type {string} */ API_KEY = IS_PUBLIC ? 'AIzaSyCyU_k4F1RM-fmoXyhUcEpvTkcWtP40aJA' : 'AIzaSyAw0yf380IIJSDJeuDhJjWgYIO0ma6ZCbg',
-    /** @type {string} */ CLIENT_ID = IS_PUBLIC ? '906125590321-j0kts6f34vu2f70fih84g5c9udm684ok.apps.googleusercontent.com' : '918743316759-e79mcr3rks3t8291qopi82qb9i8ht5l8.apps.googleusercontent.com',
-    /** @type {string[]} */ PUBLIC_PRIVATE_DOC = ['1kYfoEFXW-psZ8AMy0Ne7wRMiM3umNKBs3v9U7nvafXA', '1ZkDfbfj3G_CONE22ap82dpgnOxQ9L33CQ5K74ZVPzrA'],
+    /** @type {string} */ API_KEY = 'AIzaSyDlHQGbMjL8v0Tnc_OfzRbq_Q5QqoKhOFc',
+    /** @type {string} */ CLIENT_ID = '346818260314-csl3cc55f5jss65ibedml8foej18n5lq.apps.googleusercontent.com',
     /** @type {Object[]} */ APIS = [{
         'gapi': 'spreadsheets',
         'discovery': 'https://sheets.googleapis.com/$discovery/rest?version=v4',
@@ -65,13 +63,6 @@ function sheetToObject(sheet) {
 }
 
 async function main() {
-    if (!IS_PUBLIC) {
-        let anchors = document.getElementsByTagName("a");
-        for (let i = 0; i < anchors.length; i++) {
-            anchors[i].href = anchors[i].href.replace(PUBLIC_PRIVATE_DOC[0], PUBLIC_PRIVATE_DOC[1]);
-        }
-    }
-
     await auth.login(API_KEY, CLIENT_ID, APIS);
 
     const urlParams = new URLSearchParams(window.location.search);
