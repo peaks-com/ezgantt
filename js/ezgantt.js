@@ -24,8 +24,8 @@ let daysToMilliseconds = days => {
     };
 
 const
-    /** @type {string} */ API_KEY = 'AIzaSyDlHQGbMjL8v0Tnc_OfzRbq_Q5QqoKhOFc',
-    /** @type {string} */ CLIENT_ID = '346818260314-csl3cc55f5jss65ibedml8foej18n5lq.apps.googleusercontent.com',
+    /** @type {string} */ API_KEY = 'AIzaSyCdkAnO8pbbcmeMDcWExZv5z2uwvFZVMeM',
+    /** @type {string} */ CLIENT_ID = '877981341915-srvk38ch0uheslkhrmc4rdqv2miobadn.apps.googleusercontent.com',
     /** @type {Object[]} */ APIS = [{
         'gapi': 'spreadsheets',
         'discovery': 'https://sheets.googleapis.com/$discovery/rest?version=v4',
